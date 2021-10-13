@@ -20,7 +20,4 @@
 
 ### 화면 결과
 
-![](https://user-images.githubusercontent.com/61342175/137121822-eef02dd2-40a1-45b8-811e-a0dd0af4bd55.gif = 250x)
-![](https://user-images.githubusercontent.com/61342175/137121822-eef02dd2-40a1-45b8-811e-a0dd0af4bd55.gif){: width="50%" height="50%"}
-
-<img src="https://user-images.githubusercontent.com/61342175/137121822-eef02dd2-40a1-45b8-811e-a0dd0af4bd55.gif" width=300 align=left>
+<img src="https://user-images.githubusercontent.com/61342175/137121822-eef02dd2-40a1-45b8-811e-a0dd0af4bd55.gif" width=250 align=left>

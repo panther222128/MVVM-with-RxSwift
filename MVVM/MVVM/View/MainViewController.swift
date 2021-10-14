@@ -47,6 +47,11 @@ class MainViewController: UIViewController {
     }
     
     private func mainViewConfigure() {
+        self.navigationItem.title = "오마이걸"
+        self.navigationItem.backButtonTitle = " "
+        self.navigationController?.navigationBar.tintColor = .black
+        self.navigationController?.navigationBar.isTranslucent = false
+        self.navigationController?.navigationBar.backgroundColor = .white
         self.view.backgroundColor = .systemGray6
     }
     

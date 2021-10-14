@@ -176,11 +176,17 @@
                     <navigationItem key="navigationItem" id="EyR-Iu-QKt"/>
                     <connections>
                         <outlet property="activityName" destination="l0Y-jk-ydr" id="wvx-i5-Dwb"/>
+                        <outlet property="activityNameTitle" destination="DbR-TX-zbF" id="5zE-k8-xMZ"/>
                         <outlet property="birth" destination="LRs-IS-EsN" id="Ria-eb-02s"/>
+                        <outlet property="birthTitle" destination="g65-SN-yqS" id="CMp-aq-JJa"/>
                         <outlet property="bloodType" destination="xIt-eD-C31" id="5n8-ol-GKT"/>
+                        <outlet property="bloodTypeTitle" destination="hn2-qt-f1D" id="2DN-cA-k2d"/>
+                        <outlet property="containerStackView" destination="hHo-IQ-FwU" id="iP3-8M-gVN"/>
                         <outlet property="mbti" destination="n2w-GU-VjH" id="DR7-ON-xbo"/>
+                        <outlet property="mbtiTitle" destination="XLQ-7g-4JA" id="ved-oQ-ksK"/>
                         <outlet property="memberMainImage" destination="NeX-MP-kro" id="RRK-Fd-iUs"/>
                         <outlet property="name" destination="nYF-So-cQV" id="bzX-nU-w0Z"/>
+                        <outlet property="nameTitle" destination="e7G-am-DcY" id="IT9-7h-bb4"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FZQ-4F-PD8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

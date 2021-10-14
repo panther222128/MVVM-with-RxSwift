@@ -21,6 +21,7 @@ class MemberTableViewCell: UITableViewCell {
     }
     
     func configureCell(member: Member, imageData: Data) {
+        self.backgroundColor = .clear
         self.memberName.text = member.activityname
         self.memberImage.image = UIImage(data: imageData)
     }

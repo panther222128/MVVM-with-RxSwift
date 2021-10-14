@@ -11,7 +11,7 @@ import RxSwift
 class MainViewController: UIViewController {
     
     @IBOutlet weak var memberTableView: UITableView!
-    
+
     private var viewModel = MemberListViewModel()
     private var disposeBag = DisposeBag()
     
@@ -55,8 +55,15 @@ extension MainViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as? MemberTableViewCell else { return UITableViewCell() }
+        let imageUrl = URL(string: viewModel.member(indexPath: indexPath)?.mainimage ?? "")
+        var data = Data()
+        do {
+            data = try Data(contentsOf: imageUrl!)
+        } catch {
+            
+        }
         if let selectedMember = self.viewModel.member(indexPath: indexPath) {
-            cell.configureCell(member: selectedMember)
+            cell.configureCell(member: selectedMember, imageData: data)
         }
         return cell
     }

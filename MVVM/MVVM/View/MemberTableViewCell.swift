@@ -10,6 +10,7 @@ import UIKit
 class MemberTableViewCell: UITableViewCell {
     
     @IBOutlet weak var memberName: UILabel!
+    @IBOutlet weak var memberImage: UIImageView!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -19,8 +20,9 @@ class MemberTableViewCell: UITableViewCell {
         super.setSelected(selected, animated: animated)
     }
     
-    func configureCell(member: Member) {
+    func configureCell(member: Member, imageData: Data) {
         self.memberName.text = member.activityname
+        self.memberImage.image = UIImage(data: imageData)
     }
 
 }

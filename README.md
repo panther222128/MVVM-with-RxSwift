@@ -46,3 +46,7 @@ Postman 데이터 예시
 <img src="https://user-images.githubusercontent.com/61342175/137261231-6393b489-8c2c-4afa-a859-42b6ed615818.png" width=250 align=left>
 
 <img src="https://user-images.githubusercontent.com/61342175/137261240-9073307c-0aab-4256-9072-66eb89c5070a.png" width=250 align=left>
+
+<img src="https://user-images.githubusercontent.com/61342175/137264350-6545f414-bf7c-4eb5-ae67-88c0ad949fe2.png" width=250 align=left>
+
+<img src="https://user-images.githubusercontent.com/61342175/137264363-4d0d1e01-fa30-4a4b-a3e5-ad734ad41355.png" width=250 align=left>

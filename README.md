@@ -38,3 +38,7 @@ Postman 데이터 예시
 ### 화면 결과
 
 <img src="https://user-images.githubusercontent.com/61342175/137121822-eef02dd2-40a1-45b8-811e-a0dd0af4bd55.gif" width=250 align=left>
+
+- 2021.10.14 메인 화면 수정
+
+<img src="https://user-images.githubusercontent.com/61342175/137252307-c01f3475-b17e-42a1-af3f-9b25be5354d3.png" width=250 align=left>

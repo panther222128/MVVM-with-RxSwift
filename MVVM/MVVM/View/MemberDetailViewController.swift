@@ -66,10 +66,9 @@ class MemberDetailViewController: UIViewController {
     
     private func mainViewConfigure() {
         self.navigationItem.title = "멤버 소개"
-        
-        self.navigationController?.navigationBar.isTranslucent = false
         self.navigationController?.navigationBar.backgroundColor = .white
         self.navigationItem.backBarButtonItem?.tintColor = .black
+        self.navigationController?.setStatusBar(backgroundColor: .white)
         self.view.backgroundColor = .systemGray6
     }
     

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A0625E482717F52E009B4CCA /* UIImageAlpha.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0625E472717F52E009B4CCA /* UIImageAlpha.swift */; };
 		A09C57EF271620C100F853A9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A09C57EE271620C100F853A9 /* AppDelegate.swift */; };
 		A09C57F1271620C100F853A9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A09C57F0271620C100F853A9 /* SceneDelegate.swift */; };
 		A09C57F3271620C100F853A9 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A09C57F2271620C100F853A9 /* MainViewController.swift */; };
@@ -29,6 +30,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		A0625E472717F52E009B4CCA /* UIImageAlpha.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageAlpha.swift; sourceTree = "<group>"; };
 		A09C57EB271620C100F853A9 /* MVVM.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MVVM.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A09C57EE271620C100F853A9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A09C57F0271620C100F853A9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -63,6 +65,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A0625E462717F513009B4CCA /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				A0625E472717F52E009B4CCA /* UIImageAlpha.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
 		A09C57E2271620C100F853A9 = {
 			isa = PBXGroup;
 			children = (
@@ -82,6 +92,7 @@
 		A09C57ED271620C100F853A9 /* MVVM */ = {
 			isa = PBXGroup;
 			children = (
+				A0625E462717F513009B4CCA /* Extension */,
 				A09C581F27162B0700F853A9 /* View */,
 				A09C581E271626CF00F853A9 /* Application */,
 				A09C581B271625AF00F853A9 /* ViewModel */,
@@ -232,6 +243,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A09C58152716216500F853A9 /* UseCase.swift in Sources */,
+				A0625E482717F52E009B4CCA /* UIImageAlpha.swift in Sources */,
 				A09C57F3271620C100F853A9 /* MainViewController.swift in Sources */,
 				A09C58252716467A00F853A9 /* MemberDetailViewModel.swift in Sources */,
 				A09C57EF271620C100F853A9 /* AppDelegate.swift in Sources */,

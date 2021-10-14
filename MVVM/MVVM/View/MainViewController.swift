@@ -20,6 +20,7 @@ class MainViewController: UIViewController {
         memberTableView.dataSource = self
         memberTableView.delegate = self
         subscribe()
+        tableViewBackground()
         fetchMembers(path: Path.basePath.rawValue)
     }
     
@@ -42,6 +43,15 @@ class MainViewController: UIViewController {
         let alert = UIAlertController(title: "네트워크 에러", message: "\(error)", preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
         self.present(alert, animated: true)
+    }
+    
+    func tableViewBackground() {
+        let backgroundImage = UIImage(named: "OhMyGirlLogo")
+        let alphaAppliedImage = backgroundImage?.image(alpha: 0.3)
+        let backgroundImageView = UIImageView(image: alphaAppliedImage)
+        backgroundImageView.frame.size.width = memberTableView.frame.size.width
+        backgroundImageView.contentMode = .scaleAspectFit
+        memberTableView.backgroundView = backgroundImageView
     }
     
 }

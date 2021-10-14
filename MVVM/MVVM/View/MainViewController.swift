@@ -17,6 +17,7 @@ class MainViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        mainViewConfigure()
         memberTableView.dataSource = self
         memberTableView.delegate = self
         subscribe()
@@ -24,13 +25,13 @@ class MainViewController: UIViewController {
         fetchMembers(path: Path.basePath.rawValue)
     }
     
-    func subscribe()  {
+    private func subscribe()  {
         self.viewModel.membersSubject().subscribe(onNext:{ [weak self] _ in
             self?.memberTableView.reloadData()
         }).disposed(by: disposeBag)
     }
     
-    func fetchMembers(path: String) {
+    private func fetchMembers(path: String) {
         self.viewModel.fetch(path: path).subscribe { [weak self] members in
             self?.viewModel.configureMembers(members)
         } onError: { [weak self] error in
@@ -39,13 +40,18 @@ class MainViewController: UIViewController {
         }.disposed(by: disposeBag)
     }
     
-    func makeErrorAlert(error: String) {
+    private func makeErrorAlert(error: String) {
         let alert = UIAlertController(title: "네트워크 에러", message: "\(error)", preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
         self.present(alert, animated: true)
     }
     
-    func tableViewBackground() {
+    private func mainViewConfigure() {
+        self.view.backgroundColor = .systemGray6
+    }
+    
+    private func tableViewBackground() {
+        self.memberTableView.layer.cornerRadius = 15.0
         let backgroundImage = UIImage(named: "OhMyGirlLogo")
         let alphaAppliedImage = backgroundImage?.image(alpha: 0.3)
         let backgroundImageView = UIImageView(image: alphaAppliedImage)

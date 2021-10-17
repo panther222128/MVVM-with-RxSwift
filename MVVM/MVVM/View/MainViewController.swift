@@ -52,7 +52,7 @@ class MainViewController: UIViewController {
         self.navigationItem.backButtonTitle = " "
         self.navigationController?.navigationBar.backgroundColor = .white
         self.navigationController?.setStatusBar(backgroundColor: .white)
-        self.view.backgroundColor = .systemGray6
+        self.view.backgroundColor = .systemGroupedBackground
     }
     
     private func tableViewBackground() {

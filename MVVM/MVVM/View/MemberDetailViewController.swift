@@ -71,7 +71,7 @@ class MemberDetailViewController: UIViewController {
         self.navigationController?.navigationBar.backgroundColor = .white
         self.navigationItem.backBarButtonItem?.tintColor = .black
         self.navigationController?.setStatusBar(backgroundColor: .white)
-        self.view.backgroundColor = .systemGray6
+        self.view.backgroundColor = .systemGroupedBackground
     }
     
     func showMemberDetailViewController(with viewModel: MemberDetailViewModelType) {

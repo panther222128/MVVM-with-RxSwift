@@ -7,12 +7,25 @@
 
 import Foundation
 
-class MemberDetailViewModel {
+protocol MemberDetailViewModelType {
+    func configureDetail(member: Member)
+    func detailMemberName() -> String
+    func detailOriginalName() -> String
+    func detailBirth() -> String
+    func detailMbti() -> String
+    func detailBloodtype() -> String
+    func detailMainImage() -> String
+}
+
+class MemberDetailViewModel: MemberDetailViewModelType {
     
+    var member: Member
     var memberDetail: MemberDetail?
     
-    init() {
+    init(member: Member) {
+        self.member = member
         self.memberDetail = nil
+        configureDetail(member: self.member)
     }
     
     func configureDetail(member: Member) {

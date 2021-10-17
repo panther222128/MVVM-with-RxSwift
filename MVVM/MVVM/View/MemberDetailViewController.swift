@@ -26,7 +26,7 @@ class MemberDetailViewController: UIViewController {
     @IBOutlet weak var mbtiTitle: UILabel!
     @IBOutlet weak var bloodTypeTitle: UILabel!
     
-    let viewModel = MemberDetailViewModel()
+    private var viewModel: MemberDetailViewModelType?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -37,6 +37,8 @@ class MemberDetailViewController: UIViewController {
     }
     
     private func configure() {
+        guard let viewModel = viewModel else { return }
+
         let imageUrl = URL(string: viewModel.detailMainImage())
         do {
             let data = try Data(contentsOf: imageUrl!)
@@ -70,6 +72,10 @@ class MemberDetailViewController: UIViewController {
         self.navigationItem.backBarButtonItem?.tintColor = .black
         self.navigationController?.setStatusBar(backgroundColor: .white)
         self.view.backgroundColor = .systemGray6
+    }
+    
+    func showMemberDetailViewController(with viewModel: MemberDetailViewModelType) {
+        self.viewModel = viewModel
     }
     
 }

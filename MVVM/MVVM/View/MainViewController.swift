@@ -12,11 +12,12 @@ class MainViewController: UIViewController {
     
     @IBOutlet weak var memberTableView: UITableView!
 
-    private var viewModel = MemberListViewModel()
+    private var viewModel: MemberListViewModelType?
     private var disposeBag = DisposeBag()
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.showMainViewController(with: MemberListViewModel())
         mainViewConfigure()
         memberTableView.dataSource = self
         memberTableView.delegate = self
@@ -26,14 +27,14 @@ class MainViewController: UIViewController {
     }
     
     private func subscribe()  {
-        self.viewModel.membersSubject().subscribe(onNext:{ [weak self] _ in
+        self.viewModel?.membersSubject().subscribe(onNext:{ [weak self] _ in
             self?.memberTableView.reloadData()
         }).disposed(by: disposeBag)
     }
     
     private func fetchMembers(path: String) {
-        self.viewModel.fetch(path: path).subscribe { [weak self] members in
-            self?.viewModel.configureMembers(members)
+        self.viewModel?.fetch(path: path).subscribe { [weak self] members in
+            self?.viewModel?.configureMembers(members)
         } onError: { [weak self] error in
             let error = error.localizedDescription
             self?.makeErrorAlert(error: error)
@@ -64,25 +65,29 @@ class MainViewController: UIViewController {
         memberTableView.backgroundView = backgroundImageView
     }
     
+    func showMainViewController(with viewModel: MemberListViewModelType) {
+        self.viewModel = viewModel
+    }
+    
 }
 
 extension MainViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        guard let count = self.viewModel.membersCount() else { return 0 }
+        guard let count = self.viewModel?.membersCount() else { return 0 }
         return count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as? MemberTableViewCell else { return UITableViewCell() }
-        let imageUrl = URL(string: viewModel.member(indexPath: indexPath)?.mainimage ?? "")
+        let imageUrl = URL(string: viewModel?.member(indexPath: indexPath)?.mainimage ?? "")
         var data = Data()
         do {
             data = try Data(contentsOf: imageUrl!)
         } catch {
             
         }
-        if let selectedMember = self.viewModel.member(indexPath: indexPath) {
+        if let selectedMember = self.viewModel?.member(indexPath: indexPath) {
             cell.configureCell(member: selectedMember, imageData: data)
         }
         return cell
@@ -94,8 +99,8 @@ extension MainViewController: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         guard let memberDetailViewController = self.storyboard?.instantiateViewController(withIdentifier: "MemberDetail") as? MemberDetailViewController else { return }
-        if let member = self.viewModel.member(indexPath: indexPath) {
-            memberDetailViewController.viewModel.configureDetail(member: member)
+        if let member = self.viewModel?.member(indexPath: indexPath) {
+            memberDetailViewController.showMemberDetailViewController(with: MemberDetailViewModel(member: member))
         }
         self.navigationController?.pushViewController(memberDetailViewController, animated: true)
     }

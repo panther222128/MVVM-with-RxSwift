@@ -9,7 +9,15 @@ import Foundation
 import RxCocoa
 import RxSwift
 
-class MemberListViewModel {
+protocol MemberListViewModelType {
+    func fetch(path: String) -> Observable<[Member]>
+    func configureMembers(_ members: [Member])
+    func membersCount() -> Int?
+    func member(indexPath: IndexPath) -> Member?
+    func membersSubject() -> BehaviorSubject<[Member]>
+}
+
+class MemberListViewModel: MemberListViewModelType {
     
     private let useCase: MemberListUseCaseProtocol
     private var members: BehaviorSubject<[Member]>

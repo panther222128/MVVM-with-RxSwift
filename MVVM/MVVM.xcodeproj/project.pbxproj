@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		A0625E482717F52E009B4CCA /* UIImageAlpha.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0625E472717F52E009B4CCA /* UIImageAlpha.swift */; };
-		A0625E4C2718136D009B4CCA /* UINavigationControllerStatusBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0625E4B2718136D009B4CCA /* UINavigationControllerStatusBar.swift */; };
 		A09C57EF271620C100F853A9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A09C57EE271620C100F853A9 /* AppDelegate.swift */; };
 		A09C57F1271620C100F853A9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A09C57F0271620C100F853A9 /* SceneDelegate.swift */; };
 		A09C57F3271620C100F853A9 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A09C57F2271620C100F853A9 /* MainViewController.swift */; };
@@ -32,7 +31,6 @@
 
 /* Begin PBXFileReference section */
 		A0625E472717F52E009B4CCA /* UIImageAlpha.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageAlpha.swift; sourceTree = "<group>"; };
-		A0625E4B2718136D009B4CCA /* UINavigationControllerStatusBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UINavigationControllerStatusBar.swift; sourceTree = "<group>"; };
 		A09C57EB271620C100F853A9 /* MVVM.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MVVM.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A09C57EE271620C100F853A9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A09C57F0271620C100F853A9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -71,7 +69,6 @@
 			isa = PBXGroup;
 			children = (
 				A0625E472717F52E009B4CCA /* UIImageAlpha.swift */,
-				A0625E4B2718136D009B4CCA /* UINavigationControllerStatusBar.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -254,7 +251,6 @@
 				A09C582127162C1D00F853A9 /* MemberTableViewCell.swift in Sources */,
 				A09C581D271625BD00F853A9 /* MemberViewModel.swift in Sources */,
 				A09C5818271621A400F853A9 /* NetworkService.swift in Sources */,
-				A0625E4C2718136D009B4CCA /* UINavigationControllerStatusBar.swift in Sources */,
 				A09C581A271621BC00F853A9 /* EndPoint.swift in Sources */,
 				A09C5823271645F800F853A9 /* MemberDetailViewController.swift in Sources */,
 				A09C58122716210A00F853A9 /* Member.swift in Sources */,

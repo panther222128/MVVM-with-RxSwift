@@ -38,10 +38,9 @@ class MemberDetailViewController: UIViewController {
     
     private func configure() {
         guard let viewModel = viewModel else { return }
-
-        let imageUrl = URL(string: viewModel.detailMainImage())
+        guard let imageUrl = URL(string: viewModel.detailMainImage()) else { return }
         do {
-            let data = try Data(contentsOf: imageUrl!)
+            let data = try Data(contentsOf: imageUrl)
             self.memberMainImage.image = UIImage(data: data)
         } catch {
             
